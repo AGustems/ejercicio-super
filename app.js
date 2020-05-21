@@ -3,6 +3,7 @@ const hbs = require("hbs");
 const path = require("path");
 const cors = require("cors");
 const {urlencoded, json} = express;
+const carneRoute = require("./routes/carneRoute");
 
 const app = express();
 
@@ -20,12 +21,12 @@ app.get("/", (req, res, next)=>{
     res.render("index")
 })
 
-app.use("/fruta", frutaRoute);
+//app.use("/fruta", frutaRoute);
 app.use("/carne", carneRoute);
-app.use("/galletas", galletasRoute);
-app.use("/pizza", pizzaRoute);
-app.use("/chocolate", chocolateRoute);
-app.use("/verdura", verduraRoute);
+//app.use("/galletas", galletasRoute);
+//app.use("/pizza", pizzaRoute);
+//app.use("/chocolate", chocolateRoute);
+//app.use("/verdura", verduraRoute);
 
 app.listen(3000, () => {
     console.log("Server running")
