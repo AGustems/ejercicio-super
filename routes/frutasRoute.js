@@ -6,6 +6,7 @@ router.get("/", (req, res, next) => {
 
     ]
     res.send("Hi")
+    console.log("Tomas best teacher")
 })
 
 module.exports = router;
